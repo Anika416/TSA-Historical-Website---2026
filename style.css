@@ -1,84 +1,63 @@
-/* --- GLOBAL THEME & FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
 :root {
-    --bg-main: #fcfaf7;
-    --text-dark: #2c2c2c;
-    --accent-gold: #c5a059;
-    --font-fancy: 'Playfair Display', serif;
-    --font-modern: 'Montserrat', sans-serif;
-    --timeline-bg: #1a1a1a;
+    --gold: #c5a059;
+    --dark: #1a1a1a;
+    --paper: #fdfaf7;
+    --fancy: 'Playfair Display', serif;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: var(--font-modern);
-    background-color: var(--bg-main);
-    color: var(--text-dark);
-    display: flex;
-    overflow-x: hidden;
+    margin: 0; background-color: var(--paper);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
 }
 
-/* --- THEMATIC CHAPTER OVERRIDES --- */
-.theme-native { --chapter-accent: #8d6e63; --chapter-bg: #f5f1ed; }
-.theme-roots { --chapter-accent: #5d4037; --chapter-bg: #fdf5e6; }
-.theme-mansion { --chapter-accent: #704214; --chapter-bg: #f9f9f9; }
-.theme-railroad { --chapter-accent: #34495e; --chapter-bg: #ecf0f1; }
-.theme-music { --chapter-accent: #e91e63; --chapter-bg: #fff0f5; } /* Pop/Pink theme */
-.theme-edu { --chapter-accent: #2980b9; --chapter-bg: #ffffff; }
-
-/* --- LAYOUT --- */
-#timeline-sidebar {
-    width: 280px;
-    height: 100vh;
-    position: fixed;
-    background: var(--timeline-bg);
-    color: white;
-    padding: 40px 20px;
-    border-right: 5px solid var(--accent-gold);
+/* --- THE TIMELINE DROPDOWN --- */
+#timeline-nav {
+    background: var(--dark);
+    padding: 1rem 5%;
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 3px solid var(--gold);
 }
 
-main {
-    margin-left: 280px;
-    width: 100%;
+.dropbtn {
+    background: var(--gold);
+    color: white; padding: 12px 24px;
+    border: none; font-family: var(--fancy);
+    cursor: pointer; border-radius: 4px;
 }
 
-section {
-    min-height: 100vh;
-    padding: 100px 10%;
-    background-color: var(--chapter-bg);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+.dropdown-content {
+    display: none; position: absolute;
+    background: white; min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-h1 {
-    font-family: var(--font-fancy);
-    font-size: 4rem;
-    color: var(--chapter-accent);
-    margin-bottom: 1rem;
-    font-style: italic;
+.dropdown-content a {
+    color: black; padding: 12px 16px;
+    display: block; text-decoration: none;
 }
 
-h2 {
-    font-family: var(--font-fancy);
-    font-size: 2rem;
-    margin-top: 2rem;
-    color: var(--text-dark);
+.dropdown:hover .dropdown-content { display: block; }
+
+/* --- PAGE THEMES --- */
+.page { display: none; padding: 50px 10%; animation: fadeIn 0.8s; }
+.page.active { display: block; }
+
+/* Pop Culture Theme: Pink & Microphones */
+.theme-pop {
+    background-color: #fff0f5; /* Pink */
+    background-image: radial-gradient(#ff69b4 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
 }
 
-p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    max-width: 800px;
+/* --- CONTENT STYLING --- */
+h1 { font-family: var(--fancy); font-size: 3.5rem; text-align: center; }
+.img-frame { 
+    width: 100%; height: 350px; background: #ddd; 
+    margin: 2rem 0; display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--gold); border-style: double;
 }
 
-/* --- INTERACTIVE MAP --- */
-.map-frame {
-    width: 100%;
-    height: 500px;
-    background: #ddd;
-    border-radius: 15px;
-    position: relative;
-    border: 3px solid var(--accent-gold);
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
