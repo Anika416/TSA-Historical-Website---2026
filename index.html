@@ -2,54 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Brentwood Storybook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brentwood TSA Project | Historical Journey</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-global">
 
-    <nav id="timeline-sidebar">
-        <h2 style="color:var(--accent-gold); margin-bottom:2rem;">The Brentwood Journey</h2>
-        <div class="nav-links">
-            <a href="#ch1">I. Native Origins</a>
-            <a href="#ch2">II. Early Roots</a>
-            <a href="#ch3">III. The Mansions</a>
-            <a href="#ch4">IV. The Railroad</a>
-            <a href="#ch5">V. Pop Culture</a>
-            <a href="#ch6">VI. Education</a>
-            <a href="#ch7">VII. Explore Local</a>
-        </div>
-    </nav>
-
-    <main>
-        <section id="ch1" class="theme-native">
-            <h1>Before the Pages Began</h1>
-            <h2>The First Storytellers</h2>
-            <p>Centuries before European settlers, the Mississippian people lived here (800 CE to 1600s), building complex chiefdoms and earthen mounds for ceremonies[cite: 340, 341, 345].</p>
-            <p>They were the first to introduce music and sound through drumming and chanting[cite: 348].</p>
-        </section>
-
-        <section id="ch2" class="theme-roots">
-            <h1>A Place Takes Root</h1>
-            <h2>The Birth of a Settlement</h2>
-            <p>Settlement began in 1779 with Fort Nashborough, acting as a gateway for families like the Johnsons to establish permanent homes[cite: 376, 380].</p>
-        </section>
-
-        <section id="ch3" class="theme-mansion">
-            <h1>The Smith Mansion</h1>
-            <p>Homes like Ravenswood reflect the evolution from log cabins to formal Federal-style residences[cite: 399, 403].</p>
-        </section>
-
-        <section id="ch5" class="theme-music">
-            <h1>Music & Pop Culture</h1>
-            <p>Brentwood became a "safe haven" for artists like Taylor Swift and Dolly Parton to live away from the spotlight[cite: 302, 306].</p>
-        </section>
-
-        <section id="ch7" class="theme-edu">
-            <h1>Local Attractions</h1>
-            <p>The accumulation of culture and different types of people.</p>
-            <div class="map-frame">
-                <p style="text-align:center; padding-top:200px;">[Interactive Map: Brentwood Attractions]</p>
+    <header id="timeline-nav">
+        <div class="nav-container">
+            <h2 class="site-title">BRENTWOOD JOURNEY</h2>
+            <div class="dropdown">
+                <button class="dropbtn">Select Era: <span id="current-era">Pre-1700s</span></button>
+                <div class="dropdown-content" id="era-menu">
+                    <a href="#" onclick="changeChapter('ch1')">Pre-1700: Native Origins</a>
+                    <a href="#" onclick="changeChapter('ch2')">Early 1800s: Settlement</a>
+                    <a href="#" onclick="changeChapter('ch3')">Mid 1800s: War & Mansions</a>
+                    <a href="#" onclick="changeChapter('ch4')">Late 1800s: The Railroad</a>
+                    <a href="#" onclick="changeChapter('ch5')">1900s: Pop Culture</a>
+                    <a href="#" onclick="changeChapter('ch6')">2000s: Modern Education</a>
+                    <a href="#" onclick="changeChapter('ch7')">Explore: Local Map</a>
+                </div>
             </div>
+        </div>
+    </header>
+
+    <main id="content-viewport">
+        <section class="page active" id="ch1-page">
+            <div class="page-header">
+                <span class="chapter-num">Chapter 1</span>
+                <h1>Before the Pages Began</h1>
+            </div>
+            
+            <div class="img-frame">[Image 1 - Native Landscape]</div>
+
+            <article>
+                <h3>The First Storytellers</h3>
+                <p>Long before Nashville was "Music City," the Mississippian people (800 CE - 1600s) built complex chiefdoms and earthen mounds[cite: 1, 2]. They introduced the earliest traditions of music through drumming and chanting[cite: 8].</p>
+                <div class="img-frame-small">[Image 2 - Archaeological Map]</div>
+                <h3>Stewardship</h3>
+                <p>For these tribes, land was a living system to be respected, not property[cite: 11]. This was reflected in sustainable hunting and rotational agriculture[cite: 15].</p>
+            </article>
         </section>
     </main>
 
