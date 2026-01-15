@@ -1,84 +1,58 @@
-/* --- GLOBAL THEME & FONTS --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brentwood Storybook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root {
-    --bg-main: #fcfaf7;
-    --text-dark: #2c2c2c;
-    --accent-gold: #c5a059;
-    --font-fancy: 'Playfair Display', serif;
-    --font-modern: 'Montserrat', sans-serif;
-    --timeline-bg: #1a1a1a;
-}
+    <nav id="timeline-sidebar">
+        <h2 style="color:var(--accent-gold); margin-bottom:2rem;">The Brentwood Journey</h2>
+        <div class="nav-links">
+            <a href="#ch1">I. Native Origins</a>
+            <a href="#ch2">II. Early Roots</a>
+            <a href="#ch3">III. The Mansions</a>
+            <a href="#ch4">IV. The Railroad</a>
+            <a href="#ch5">V. Pop Culture</a>
+            <a href="#ch6">VI. Education</a>
+            <a href="#ch7">VII. Explore Local</a>
+        </div>
+    </nav>
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+    <main>
+        <section id="ch1" class="theme-native">
+            <h1>Before the Pages Began</h1>
+            <h2>The First Storytellers</h2>
+            <p>Centuries before European settlers, the Mississippian people lived here (800 CE to 1600s), building complex chiefdoms and earthen mounds for ceremonies[cite: 340, 341, 345].</p>
+            <p>They were the first to introduce music and sound through drumming and chanting[cite: 348].</p>
+        </section>
 
-body {
-    font-family: var(--font-modern);
-    background-color: var(--bg-main);
-    color: var(--text-dark);
-    display: flex;
-    overflow-x: hidden;
-}
+        <section id="ch2" class="theme-roots">
+            <h1>A Place Takes Root</h1>
+            <h2>The Birth of a Settlement</h2>
+            <p>Settlement began in 1779 with Fort Nashborough, acting as a gateway for families like the Johnsons to establish permanent homes[cite: 376, 380].</p>
+        </section>
 
-/* --- THEMATIC CHAPTER OVERRIDES --- */
-.theme-native { --chapter-accent: #8d6e63; --chapter-bg: #f5f1ed; }
-.theme-roots { --chapter-accent: #5d4037; --chapter-bg: #fdf5e6; }
-.theme-mansion { --chapter-accent: #704214; --chapter-bg: #f9f9f9; }
-.theme-railroad { --chapter-accent: #34495e; --chapter-bg: #ecf0f1; }
-.theme-music { --chapter-accent: #e91e63; --chapter-bg: #fff0f5; } /* Pop/Pink theme */
-.theme-edu { --chapter-accent: #2980b9; --chapter-bg: #ffffff; }
+        <section id="ch3" class="theme-mansion">
+            <h1>The Smith Mansion</h1>
+            <p>Homes like Ravenswood reflect the evolution from log cabins to formal Federal-style residences[cite: 399, 403].</p>
+        </section>
 
-/* --- LAYOUT --- */
-#timeline-sidebar {
-    width: 280px;
-    height: 100vh;
-    position: fixed;
-    background: var(--timeline-bg);
-    color: white;
-    padding: 40px 20px;
-    border-right: 5px solid var(--accent-gold);
-}
+        <section id="ch5" class="theme-music">
+            <h1>Music & Pop Culture</h1>
+            <p>Brentwood became a "safe haven" for artists like Taylor Swift and Dolly Parton to live away from the spotlight[cite: 302, 306].</p>
+        </section>
 
-main {
-    margin-left: 280px;
-    width: 100%;
-}
+        <section id="ch7" class="theme-edu">
+            <h1>Local Attractions</h1>
+            <p>The accumulation of culture and different types of people.</p>
+            <div class="map-frame">
+                <p style="text-align:center; padding-top:200px;">[Interactive Map: Brentwood Attractions]</p>
+            </div>
+        </section>
+    </main>
 
-section {
-    min-height: 100vh;
-    padding: 100px 10%;
-    background-color: var(--chapter-bg);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-h1 {
-    font-family: var(--font-fancy);
-    font-size: 4rem;
-    color: var(--chapter-accent);
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-h2 {
-    font-family: var(--font-fancy);
-    font-size: 2rem;
-    margin-top: 2rem;
-    color: var(--text-dark);
-}
-
-p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    max-width: 800px;
-}
-
-/* --- INTERACTIVE MAP --- */
-.map-frame {
-    width: 100%;
-    height: 500px;
-    background: #ddd;
-    border-radius: 15px;
-    position: relative;
-    border: 3px solid var(--accent-gold);
-}
+    <script src="script.js"></script>
+</body>
+</html>
