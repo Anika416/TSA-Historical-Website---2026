@@ -210,18 +210,17 @@ h1 {
 
 @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-//Images aren't too large.
+    /* This rule targets every image in your chapters */
 .article-img {
-    width: 100%;          
-    max-height: 250px;
-    object-fit: cover; 
+    width: 100%;           /* Fills the card width */
+    max-height: 220px;     /* Forces the height to stay small and aesthetic */
+    object-fit: cover;     /* Prevents stretching by cropping the edges slightly */
     border-radius: 8px;
     margin-bottom: 15px;
+    display: block;
+}
 
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+/* Specific fix for Chapter 1 if they are still stubborn */
+.theme-ch1 .article-img {
+    max-height: 180px;     /* Makes the first page images even slightly smaller */
 }
