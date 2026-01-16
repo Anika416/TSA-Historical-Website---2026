@@ -5,14 +5,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                   <img src="img1.jpg" class="article-img" style="max-height: 140px !important;" alt="Native Framework">
+                   <img src="img1.jpg" class="article-img" style="max-height: 140px;" alt="Native Framework">
                     <h2>The First Storytellers</h2>
-                    [cite_start]<p>Long before Nashville earned the nickname "Music City," the Mississippian people lived on these lands from 800 CE to the 1600s[cite: 2]. [cite_start]They built complex societies known as chiefdoms centered around earthen mounds used for ceremonies and burials[cite: 4, 5].</p>
+                    <p>Long before Nashville was "Music City," the Mississippian people lived here from 800 CE to the 1600s. They built complex societies called chiefdoms centered around earthen mounds. These mounds served as centers for ceremonies and burials, acting as the heart of their communal life.</p>
                 </div>
                 <div class="card">
-                    <img src="img2.jpg" class="article-img" style="max-height: 140px !important;" alt="Native Mounds">
+                    <img src="img2.jpg" class="article-img" style="max-height: 140px;" alt="Native Mounds">
                     <h2>Stewardship of Land</h2>
-                    [cite_start]<p>For native tribes, land was a living system to be respected, not owned[cite: 11]. [cite_start]Their stewardship included sustainable hunting and rotational agriculture, which prevented the overuse of resources[cite: 15].</p>
+                    <p>For native tribes, the land was a living system to be respected. They used sustainable hunting and rotational agriculture to prevent resource depletion. They were the region's first musicians, using drumming and chanting in their sacred ceremonies.</p>
                 </div>
             </div>`
     },
@@ -23,12 +23,12 @@ const db = {
                 <div class="card">
                       <img src="img3.jpg" class="article-img" alt="Settlement">
                     <h2>Birth of a Settlement</h2>
-                    [cite_start]<p>In the early 1800s, European settlers established permanent homes[cite: 28]. [cite_start]The first American settlement began in 1779 with Fort Nashborough, which served as a center for trade and migration[cite: 31, 32].</p>
+                    <p>In the late 1700s, European settlers arrived for the fertile soil. Following the 1779 establishment of Fort Nashborough, families began building permanent homes, turning a frontier outpost into a community of farmers growing tobacco and corn.</p>
                 </div>
                 <div class="card">
                     <img src="img4.jpg" class="article-img" alt="Boiling Springs">
                     <h2>Community & Learning</h2>
-                    [cite_start]<p>Farming was the foundation of early life, with small family farms dominating the landscape[cite: 39, 42]. [cite_start]Natural springs like the one at Boiling Springs Academy were central to the community[cite: 45, 46].</p>
+                    <p>Natural landmarks like springs determined where farms were located. The Boiling Springs Academy was founded near one of these springs, marking a shift from frontier survival toward education and local governance.</p>
                 </div>
             </div>`
     },
@@ -37,14 +37,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                    <img src="img5.jpg" class="article-img" alt="Ravenswood Mansion">
+                    <img src="img5.jpg" class="article-img" alt="Ravenswood">
                     <h2>Architecture of Ambition</h2>
-                    [cite_start]<p>Historic homes like Ravenswood Mansion reflect the evolution from frontier settlements to established agricultural communities[cite: 51]. [cite_start]These homes featured Greek Revival details like columns and symmetrical frontage[cite: 54, 56].</p>
+                    <p>Economic prosperity led to grand Greek Revival mansions like Ravenswood. These homes were symbols of social status, featuring symmetrical designs and grand columns, representing the peak of architectural expansion before the Civil War.</p>
                 </div>
                 <div class="card">
                     <img src="img6.jpg" class="article-img" alt="Civil War">
                     <h2>The Civil War</h2>
-                    [cite_start]<p>Brentwood was a strategic point during the Civil War, experiencing significant military movement and conflict[cite: 67]. [cite_start]The war reshaped the local economy and ended the plantation-based system[cite: 74, 76].</p>
+                    <p>Brentwood's proximity to Nashville made it a strategic point. The Battle of Brentwood in 1863 brought destruction to the area. The war's end dismantled the plantation system, forcing a total reinvention of the local economy.</p>
                 </div>
             </div>`
     },
@@ -53,14 +53,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                    <img src="img7.jpg" class="article-img" alt="Steam Train">
+                    <img src="img7.jpg" class="article-img" alt="Railroad">
                     <h2>The Iron Horse</h2>
-                    [cite_start]<p>The railroad arrived in 1859, connecting Brentwood to Nashville and shifting the town center to a new depot[cite: 91, 92]. [cite_start]It allowed farmers to reach larger markets and reduced rural isolation[cite: 93, 105].</p>
+                    <p>The 1859 arrival of the Nashville and Decatur Railroad shifted the town center to a new depot. This allowed farmers to reach larger markets and gave residents access to Nashville’s cultural scene, ending rural isolation.</p>
                 </div>
                 <div class="card">
-                    <img src="img8.jpg" class="article-img" alt="Railroad Station">
-                    <h2>Growth of the Depot</h2>
-                    [cite_start]<p>The railroad transformed Brentwood into a connected hub, laying the foundation for suburban growth[cite: 112, 113]. [cite_start]It encouraged families to settle in the area for its balance of rural quiet and urban access[cite: 108].</p>
+                    <img src="img8.jpg" class="article-img" alt="Growth">
+                    <h2>Travel and Growth</h2>
+                    <p>Scheduled passenger trains made travel predictable. The depot became a community hub where news was shared, laying the foundation for Brentwood’s transformation into a premier residential retreat.</p>
                 </div>
             </div>`
     },
@@ -69,14 +69,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                     <img src="img9.jpg" class="article-img" alt="Nashville Stage">
+                     <img src="img9.jpg" class="article-img" alt="Sanctuary">
                     <h2>A Safe Haven</h2>
-                    [cite_start]<p>Brentwood serves as a sanctuary for artists like Taylor Swift and Dolly Parton, offering a private lifestyle away from the spotlight[cite: 116, 120]. [cite_start]This balance allows creativity to blossom in a familial setting[cite: 117].</p>
+                    <p>Brentwood is a sanctuary for music icons like Taylor Swift and Dolly Parton. It offers a private lifestyle away from the spotlight while remaining minutes from Nashville’s recording studios, sustaining a vibrant music community.</p>
                 </div>
                 <div class="card">
-                    <img src="img10.jpg" class="article-img" alt="Microphone">
+                    <img src="img10.jpg" class="article-img" alt="Creators">
                     <h2>Future Creators</h2>
-                    [cite_start]<p>Local venues like Brentfest nurture rising stars such as Conner Smith[cite: 148, 149]. [cite_start]School curriculums in band and theater provide essential exposure for the next generation[cite: 126, 143].</p>
+                    <p>Local culture fosters talent through events like Brentfest, which nurture rising stars like Conner Smith. Music curriculums in local schools provide essential exposure for the next generation of performers.</p>
                 </div>
             </div>`
     },
@@ -85,21 +85,21 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                    <img src="img11.jpg" class="article-img" alt="Modern School">
+                    <img src="img11.jpg" class="article-img" alt="Excellence">
                     <h2>Academic Excellence</h2>
-                    [cite_start]<p>During the 2000s, Williamson County Schools gained national recognition for academic excellence[cite: 129, 130]. [cite_start]Expansion included new facilities for music programs, aiding the growth of the local musician population[cite: 132, 134].</p>
+                    <p>A population boom in the 2000s transformed Williamson County Schools into a nationally recognized powerhouse. The district attracts families who prioritize top-tier education and community support.</p>
                 </div>
                 <div class="card">
-                    <img src="img12.jpg" class="article-img" alt="Sports and Arts">
-                    <h2>Holistic Development</h2>
-                    [cite_start]<p>Local schools nurture the next generation of creative thinkers through theater and music ensembles[cite: 139, 143]. [cite_start]These programs serve as a unifying force for the community[cite: 144].</p>
+                    <img src="img12.jpg" class="article-img" alt="Development">
+                    <h2>The Community Heart</h2>
+                    <p>Education goes beyond the classroom with investments in arts and athletics. These programs serve as a unifying force, where student performances and games are the primary social gatherings.</p>
                 </div>
             </div>`
     },
     7: {
         title: "Interactive Map",
         content: `
-            [cite_start]<p style="text-align:center; margin-bottom:20px;">The accumulation of culture and different types of people[cite: 151].</p>
+            <p style="text-align:center; margin-bottom:20px;">Explore the local attractions that define Brentwood today.</p>
             <div id="map-frame">
                 <div class="pin" style="top:30%; left:40%;" data-label="Ravenswood Mansion"></div>
                 <div class="pin" style="top:50%; left:60%;" data-label="Crockett Park"></div>
@@ -113,10 +113,10 @@ const db = {
             <div class="card">
                 <h2>Works Cited</h2>
                 <ul class="ref-list">
-                    <li>Brentwood Historic Commission. [cite_start]"History of Brentwood." [cite: 80]</li>
-                    <li>Smith, J. (2020). [cite_start]*The Battle of Brentwood: A Civil War History*. [cite: 80]</li>
-                    <li>Williamson County Schools. [cite_start]"District Achievements 2023." [cite: 130]</li>
-                    <li>Tennessee State Museum. [cite_start]"Mississippian Culture in Middle TN." [cite: 11]</li>
+                    <li>Brentwood Historic Commission. "History of Brentwood." Official City Website.</li>
+                    <li>Smith, J. (2020). The Battle of Brentwood: A Civil War History.</li>
+                    <li>Williamson County Schools. "District Achievements 2023."</li>
+                    <li>Tennessee State Museum. "Mississippian Culture in Middle TN."</li>
                 </ul>
             </div>`
     }
@@ -126,19 +126,13 @@ function loadChapter(id) {
     const display = document.getElementById('content-display');
     const nodes = document.querySelectorAll('.timeline-node');
     const body = document.body;
-
     display.style.opacity = '0';
-
     setTimeout(() => {
         const data = db[id];
         display.innerHTML = `<h1>${data.title}</h1>${data.content}`;
         body.className = `theme-ch${id}`;
-
         nodes.forEach(node => node.classList.remove('active'));
-        if(nodes[id-1]) {
-            nodes[id-1].classList.add('active');
-        }
-
+        if(nodes[id-1]) nodes[id-1].classList.add('active');
         display.style.opacity = '1';
         window.scrollTo(0,0);
     }, 200);
