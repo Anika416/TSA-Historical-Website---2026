@@ -11,7 +11,7 @@ const db = {
                     <p>Long before Nashville earned the nickname "Music City," the Mississippian people lived on these lands from 800 CE to the 1600s. Deeply rooted in agriculture and communal life, they built complex chiefdoms centered around earthen mounds used for ceremonies and burials.</p>
                 </div>
                 <div class="card">
-                    <img src="images/img2.jpg" class="article-img" alt="Native Mounds">
+                    <img src="img2.jpg" class="article-img" alt="Native Mounds">
                     <h2>Stewardship of Land</h2>
                     <p>For the native tribes, land was a living system to be respected, not owned. Sustainable hunting, rotational agriculture, and seasonal migration prevented resource depletion. They introduced the region's first musical traditions—drumming and chanting.</p>
                 </div>
@@ -22,7 +22,7 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                      <img src="images/img3.jpg" class="article-img" alt="Log Cabins">
+                      <img src="img3.jpg" class="article-img" alt="Log Cabins">
                     <h2>Birth of a Settlement</h2>
                     <p>In the late 1700s, European settlers were drawn to the fertile soil. Following the establishment of Fort Nashborough in 1779, families began building permanent homes, transitioning from frontier survival to habitation.</p>
                 </div>
