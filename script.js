@@ -6,7 +6,7 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                    <div class="img-placeholder"><img src="images/img1.jpg" alt="Image 1: Native Landscape"></div>
+                    <img src="Native Photo - Pg1.pdf" alt="My picture">
                     <h2>The First Storytellers</h2>
                     <p>Long before Nashville earned the nickname "Music City," the Mississippian people lived on these lands from 800 CE to the 1600s. Deeply rooted in agriculture and communal life, they built complex chiefdoms centered around earthen mounds used for ceremonies and burials.</p>
                 </div>
