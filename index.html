@@ -1,50 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brentwood TSA Project | Historical Journey</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="theme-global">
 
-    <header id="timeline-nav">
-        <div class="nav-container">
-            <h2 class="site-title">BRENTWOOD JOURNEY</h2>
-            <div class="dropdown">
-                <button class="dropbtn">Select Era: <span id="current-era">Pre-1700s</span></button>
-                <div class="dropdown-content" id="era-menu">
-                    <a href="#" onclick="changeChapter('ch1')">Pre-1700: Native Origins</a>
-                    <a href="#" onclick="changeChapter('ch2')">Early 1800s: Settlement</a>
-                    <a href="#" onclick="changeChapter('ch3')">Mid 1800s: War & Mansions</a>
-                    <a href="#" onclick="changeChapter('ch4')">Late 1800s: The Railroad</a>
-                    <a href="#" onclick="changeChapter('ch5')">1900s: Pop Culture</a>
-                    <a href="#" onclick="changeChapter('ch6')">2000s: Modern Education</a>
-                    <a href="#" onclick="changeChapter('ch7')">Explore: Local Map</a>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Build Interactive Storybook Website</title>
+    </head>
 
-    <main id="content-viewport">
-        <section class="page active" id="ch1-page">
-            <div class="page-header">
-                <span class="chapter-num">Chapter 1</span>
-                <h1>Before the Pages Began</h1>
-            </div>
-            
-            <div class="img-frame">[Image 1 - Native Landscape]</div>
-
-            <article>
-                <h3>The First Storytellers</h3>
-                <p>Long before Nashville was "Music City," the Mississippian people (800 CE - 1600s) built complex chiefdoms and earthen mounds[cite: 1, 2]. They introduced the earliest traditions of music through drumming and chanting[cite: 8].</p>
-                <div class="img-frame-small">[Image 2 - Archaeological Map]</div>
-                <h3>Stewardship</h3>
-                <p>For these tribes, land was a living system to be respected, not property[cite: 11]. This was reflected in sustainable hunting and rotational agriculture[cite: 15].</p>
-            </article>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+    </body>
+  </html>
+  
