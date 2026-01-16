@@ -1,63 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
-
+/* --- RESET & FONTS --- */
 :root {
-    --gold: #c5a059;
-    --dark: #1a1a1a;
-    --paper: #fdfaf7;
-    --fancy: 'Playfair Display', serif;
+    --bg-color: #f4ece2;
+    --accent: #5d4037;
+    --text: #2c2c2c;
+    --card-bg: #fff;
+    --font-head: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
 }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    margin: 0; background-color: var(--paper);
-    font-family: 'Montserrat', sans-serif;
-    color: var(--dark);
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: var(--font-body);
+    transition: background-color 0.5s ease;
+    overflow-x: hidden;
 }
 
-/* --- THE TIMELINE DROPDOWN --- */
-#timeline-nav {
-    background: var(--dark);
-    padding: 1rem 5%;
-    position: sticky; top: 0; z-index: 1000;
-    border-bottom: 3px solid var(--gold);
+/* --- TIMELINE NAVIGATION --- */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
-.dropbtn {
-    background: var(--gold);
-    color: white; padding: 12px 24px;
-    border: none; font-family: var(--fancy);
-    cursor: pointer; border-radius: 4px;
+.logo {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 
-.dropdown-content {
-    display: none; position: absolute;
-    background: white; min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.dropdown-content a {
-    color: black; padding: 12px 16px;
-    display: block; text-decoration: none;
+/* The Line */
+.line {
+    position: absolute;
+    top: 9px; /* Centers line with dots */
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: #ccc;
+    z-index: 0;
 }
 
-.dropdown:hover .dropdown-content { display: block; }
-
-/* --- PAGE THEMES --- */
-.page { display: none; padding: 50px 10%; animation: fadeIn 0.8s; }
-.page.active { display: block; }
-
-/* Pop Culture Theme: Pink & Microphones */
-.theme-pop {
-    background-color: #fff0f5; /* Pink */
-    background-image: radial-gradient(#ff69b4 0.5px, transparent 0.5px);
-    background-size: 20px 20px;
+.timeline-node {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* --- CONTENT STYLING --- */
-h1 { font-family: var(--fancy); font-size: 3.5rem; text-align: center; }
-.img-frame { 
-    width: 100%; height: 350px; background: #ddd; 
-    margin: 2rem 0; display: flex; align-items: center; justify-content: center;
-    border: 2px solid var(--gold); border-style: double;
+.dot {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    transition: 0.3s;
 }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.label {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.timeline-node:hover .dot { border-color: var(--accent); transform: scale(1.2); }
+.timeline-node:hover .label { opacity: 1; color: var(--accent); }
+
+/* Active State */
+.timeline-node.active .dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+}
+.timeline-node.active .label { opacity: 1; color: var(--accent); font-weight: 700; }
+
+
+/* --- MAIN LAYOUT --- */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    animation: slideUp 0.6s ease-out;
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--accent);
+}
+
+/* --- POP-OUT ARTICLE CARDS --- */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1), -5px -5px 20px rgba(255,255,255,0.8);
+    transition: transform 0.3s;
+    border-top: 5px solid var(--accent);
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card h2 {
+    font-family: var(--font-head);
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.card p { line-height: 1.7; font-size: 1rem; color: #555; }
+
+/* Image Styling */
+.img-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+    overflow: hidden;
+}
+.img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- THEME VARIATIONS --- */
+
+/* Ch 1: Native (Earthy) */
+.theme-ch1 { --bg-color: #f4ece2; --accent: #5d4037; }
+
+/* Ch 2: Settlement (Rustic/Green) */
+.theme-ch2 { --bg-color: #e8f5e9; --accent: #2e7d32; }
+
+/* Ch 3: Mansions (Royal Navy) */
+.theme-ch3 { --bg-color: #eceff1; --accent: #1a237e; }
+
+/* Ch 4: Railroad (Industrial Grey/Orange) */
+.theme-ch4 { --bg-color: #fff3e0; --accent: #e65100; }
+
+/* Ch 5: Pop Culture (Pink/Vibrant) */
+.theme-ch5 { 
+    --bg-color: #fce4ec; 
+    --accent: #d81b60; 
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Ch 6: Education (Modern Blue) */
+.theme-ch6 { --bg-color: #e3f2fd; --accent: #0277bd; }
+
+/* Ch 7: Map (Neutral) */
+.theme-ch7 { --bg-color: #fafafa; --accent: #333; }
+
+
+/* --- REFERENCES PAGE --- */
+.ref-list li { margin-bottom: 15px; padding-left: 10px; border-left: 3px solid var(--accent); }
+
+/* --- MAP --- */
+#map-frame {
+    width: 100%; height: 450px;
+    background: #aed6f1; border-radius: 15px;
+    position: relative; border: 4px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.pin {
+    width: 30px; height: 30px; background: red;
+    border-radius: 50% 50% 0 50%; transform: rotate(45deg);
+    position: absolute; cursor: pointer;
+}
+.pin:hover::after {
+    content: attr(data-label);
+    position: absolute; top: -40px; left: -20px;
+    background: white; padding: 5px 10px;
+    transform: rotate(-45deg); white-space: nowrap;
+    border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 0.8rem; font-weight: bold;
+}
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
