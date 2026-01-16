@@ -22,7 +22,7 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                     <img src="NativeMounds1.pdf" alt="My picture">
+                      <img src="images/img3.jpg" class="article-img" alt="Log Cabins">
                     <h2>Birth of a Settlement</h2>
                     <p>In the late 1700s, European settlers were drawn to the fertile soil. Following the establishment of Fort Nashborough in 1779, families began building permanent homes, transitioning from frontier survival to habitation.</p>
                 </div>
