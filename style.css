@@ -210,19 +210,18 @@ h1 {
 
 @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Keeps images proportional and fits them inside the card boundaries */
+//Images aren't too large.
 .article-img {
-    width: 100%;
-    max-height: 250px; /* Limits the vertical size so they don't take over the screen */
-    object-fit: cover; /* Crops the image slightly to fit the area perfectly without stretching */
-    border-radius: 10px;
+    width: 100%;          
+    max-height: 250px;
+    object-fit: cover; 
+    border-radius: 8px;
     margin-bottom: 15px;
-    display: block;
-}
 
-/* Ensures the card doesn't overflow */
-.card {
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
