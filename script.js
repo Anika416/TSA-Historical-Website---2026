@@ -1,19 +1,19 @@
 // --- CONTENT DATABASE ---
-// Contains the text directly from your PDF and placeholders for images.
+// Contains the full text from the documentation and sequential image references.
 const db = {
     1: {
         title: "Before the Pages Began",
         content: `
             <div class="article-grid">
                 <div class="card">
-                   <img src="img1.jpg" class="article-img" alt="Native Framework">
+                   <img src="img1.jpg" class="article-img" alt="First Storytellers">
                     <h2>The First Storytellers</h2>
-                    <p>Long before Nashville earned the nickname "Music City," the Mississippian people lived on these lands from 800 CE to the 1600s. Deeply rooted in agriculture and communal life, they built complex chiefdoms centered around earthen mounds used for ceremonies and burials.</p>
+                    <p>Long before Nashville earned the nickname "Music City," the Mississippian people lived on these lands from 800 CE to the 1600s[cite: 1, 2]. Deeply rooted in agriculture and communal life, they built complex chiefdoms centered around earthen mounds used for ceremonies and burials[cite: 3, 4, 5].</p>
                 </div>
                 <div class="card">
-                    <img src="img2.jpg" class="article-img" alt="Native Mounds">
+                    <img src="img2.jpg" class="article-img" alt="Native Stewardship">
                     <h2>Stewardship of Land</h2>
-                    <p>For the native tribes, land was a living system to be respected, not owned. Sustainable hunting, rotational agriculture, and seasonal migration prevented resource depletion. They introduced the region's first musical traditions—drumming and chanting.</p>
+                    <p>For native tribes, land was a living system to be respected, not owned[cite: 11]. Sustainable hunting, rotational agriculture, and seasonal migration prevented resource depletion[cite: 15]. They introduced the region's first musical traditions—drumming and chanting[cite: 8].</p>
                 </div>
             </div>`
     },
@@ -22,14 +22,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                      <img src="img3.jpg" class="article-img" alt="Log Cabins">
+                      <img src="img3.jpg" class="article-img" alt="Birth of a Settlement">
                     <h2>Birth of a Settlement</h2>
-                    <p>In the late 1700s, European settlers were drawn to the fertile soil. Following the establishment of Fort Nashborough in 1779, families began building permanent homes, transitioning from frontier survival to habitation.</p>
+                    <p>In the early 1800s, European settlers established permanent homes, drawn by fertile soil and fresh water[cite: 28, 29]. The first American settlement began in 1779 with Fort Nashborough, which served as a center for trade and migration[cite: 31, 32].</p>
                 </div>
                 <div class="card">
-                    <img src="img4.jpg" class="article-img" alt="Boiling Springs">
+                    <img src="img4.jpg" class="article-img" alt="Community Learning">
                     <h2>Community & Learning</h2>
-                    <p>Farming was the foundation. Natural springs determined farm locations; one such spring gave rise to the Boiling Springs Academy, marking a shift from survival to education and structured community life.</p>
+                    <p>Farming was the foundation of early life, with small family farms dominating the landscape[cite: 39, 42]. Natural springs determined farm locations, eventually leading to the creation of Boiling Springs Academy, symbolizing a shift toward education[cite: 45, 46, 48].</p>
                 </div>
             </div>`
     },
@@ -40,12 +40,12 @@ const db = {
                 <div class="card">
                     <img src="img5.jpg" class="article-img" alt="Ravenswood Mansion">
                     <h2>Architecture of Ambition</h2>
-                    <p>The transition to Greek Revival mansions, like the Alexander Smith House (Ravenswood), signaled economic prosperity. These homes were symbols of social change in Williamson County.</p>
+                    <p>Historic homes like the Alexander Smith House (Ravenswood Mansion) reflect the evolution from log cabins to formal residences[cite: 50, 51, 53]. These homes are symbols of Middle Tennessee's architectural heritage[cite: 61].</p>
                 </div>
                 <div class="card">
-                    <img src="img6.jpg" class="article-img" alt="Civil War">
+                    <img src="img6.jpg" class="article-img" alt="Civil War Impact">
                     <h2>The Civil War</h2>
-                    <p>Brentwood’s proximity to Nashville made it a strategic pivot point. The Battle of Brentwood (1863) brought raids and destruction. The end of the war dismantled the plantation system, forcing an economic transition.</p>
+                    <p>Brentwood was a pivotal point during the Civil War, experiencing significant military movement and conflict, including the Battle of Brentwood in 1863[cite: 66, 67]. The war reshaped the local economy and ended the antebellum way of life[cite: 76].</p>
                 </div>
             </div>`
     },
@@ -54,14 +54,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                    <img src="img7.jpg" class="article-img" alt="Steam Train">
+                    <img src="img7.jpg" class="article-img" alt="The Iron Horse">
                     <h2>The Iron Horse</h2>
-                    <p>The arrival of the Nashville and Decatur Railroad in 1859 shifted the town center. It allowed farmers to ship crops and residents to access Nashville’s cultural scene, breaking rural isolation.</p>
+                    <p>The railroad arrived in 1859, connecting Brentwood to Nashville and shifting the town center to a new railroad depot[cite: 91, 92]. It allowed farmers to ship crops to larger markets and lowered transportation costs[cite: 93].</p>
                 </div>
                 <div class="card">
-                    <img src="img8.jpg" class="article-img" alt="Railroad Station">
-                    <h2>Growth of the Depot</h2>
-                    <p>The railroad transformed Brentwood from a collection of scattered farms into a connected hub, laying the groundwork for the suburban growth that would define the next century.</p>
+                    <img src="img8.jpg" class="article-img" alt="Travel and Growth">
+                    <h2>Growth and Travel</h2>
+                    <p>The railroad introduced scheduled passenger trains, making travel predictable and reducing isolation[cite: 101, 105]. This connectivity laid the foundation for Brentwood's eventual transformation into a suburban community[cite: 113].</p>
                 </div>
             </div>`
     },
@@ -70,14 +70,14 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                     <img src="img9.jpg" class="article-img" alt="Nashville Stage">
+                     <img src="img9.jpg" class="article-img" alt="Music Sanctuary">
                     <h2>A Safe Haven</h2>
-                    <p>While Nashville is the stage, Brentwood is the home. It serves as a sanctuary for artists like Taylor Swift and Dolly Parton who seek a normal life away from the spotlight.</p>
+                    <p>Brentwood serves as a sanctuary for artists like Taylor Swift and Dolly Parton, offering a private lifestyle away from the spotlight while remaining close to the Nashville music hub[cite: 116, 120, 122].</p>
                 </div>
                 <div class="card">
-                    <img src="img10.jpg" class="article-img" alt="Microphone/Stage">
+                    <img src="img10.jpg" class="article-img" alt="Future Creators">
                     <h2>Future Creators</h2>
-                    <p>Events like Brentfest nurture new talent. Rising stars such as Conner Smith and Thomas Day are taking the spotlight, proving the "Music City" legacy continues here.</p>
+                    <p>The community enriches musical culture by supporting local programs and venues like Brentfest, which serve as starting points for new musical careers[cite: 128, 148].</p>
                 </div>
             </div>`
     },
@@ -86,28 +86,28 @@ const db = {
         content: `
             <div class="article-grid">
                 <div class="card">
-                    <img src="img11.jpg" class="article-img" alt="Modern School">
+                    <img src="img11.jpg" class="article-img" alt="Academic Excellence">
                     <h2>Academic Excellence</h2>
-                    <p>The 2000s saw a population boom transforming Williamson County Schools into nationally recognized institutions. Facilities for arts and athletics have attracted families prioritizing education.</p>
+                    <p>During the 2000s, Williamson County Schools gained national recognition for academic excellence following a rapid population boom[cite: 129, 130]. Expansion included new facilities for athletic and music programs[cite: 131, 132].</p>
                 </div>
                 <div class="card">
-                    <img src="img12.jpg" class="article-img" alt="Sports and Arts">
-                    <h2>Holistic Development</h2>
-                    <p>With massive investment in extracurriculars, Brentwood's schools serve as the heart of the community, fostering excellence in both the classroom and on the field.</p>
+                    <img src="img12.jpg" class="article-img" alt="Nurturing Talent">
+                    <h2>Nurturing the Next Generation</h2>
+                    <p>Local schools nurture the next generation of creative thinkers through theater, music ensembles, and curriculum-specific programs like band and choir[cite: 139, 143].</p>
                 </div>
             </div>`
     },
     7: {
         title: "Interactive Map",
         content: `
-            <p style="text-align:center; margin-bottom:20px;">Explore the local attractions that define Brentwood today.</p>
+            <p style="text-align:center; margin-bottom:20px;">The accumulation of culture and different types of people[cite: 151].</p>
             <div id="map-frame">
                 <div class="pin" style="top:30%; left:40%;" data-label="Ravenswood Mansion"></div>
                 <div class="pin" style="top:50%; left:60%;" data-label="Crockett Park"></div>
                 <div class="pin" style="top:15%; left:75%;" data-label="Dyer Observatory"></div>
                 <div class="pin" style="top:70%; left:30%;" data-label="Hill Center"></div>
             </div>
-            <div style="margin-top:20px;"><img src="img13.jpg" class="article-img" alt="Map Overview"></div>`
+            <div style="margin-top:20px;"><img src="img13.jpg" class="article-img" alt="Interactive Map Overview"></div>`
     },
     8: {
         title: "References",
@@ -119,8 +119,6 @@ const db = {
                     <li>Smith, J. (2020). *The Battle of Brentwood: A Civil War History*.</li>
                     <li>Williamson County Schools. "District Achievements 2023."</li>
                     <li>Tennessee State Museum. "Mississippian Culture in Middle TN."</li>
-                    <li>City of Brentwood. Parks and Recreation Preservation Records (2023).</li>
-                    <li>Williamson County Heritage Foundation. "The Greek Revival Era in Tennessee."</li>
                 </ul>
             </div>`
     }
