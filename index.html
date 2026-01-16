@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brentwood: A Timeless Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-ch1"> <header>
+        <div class="logo">BRENTWOOD HISTORY</div>
+        <nav class="timeline-container">
+            <div class="line"></div>
+            
+            <div class="timeline-node active" onclick="loadChapter(1)" data-year="Pre-1700">
+                <div class="dot"></div>
+                <span class="label">Origins</span>
+            </div>
+            <div class="timeline-node" onclick="loadChapter(2)" data-year="1800s">
+                <div class="dot"></div>
+                <span class="label">Settlement</span>
+            </div>
+            <div class="timeline-node" onclick="loadChapter(3)" data-year="1860s">
+                <div class="dot"></div>
+                <span class="label">Civil War</span>
+            </div>
+            <div class="timeline-node" onclick="loadChapter(4)" data-year="1890s">
+                <div class="dot"></div>
+                <span class="label">Railroad</span>
+            </div>
+            <div class="timeline-node" onclick="loadChapter(5)" data-year="1900s">
+                <div class="dot"></div>
+                <span class="label">Music</span>
+            </div>
+            <div class="timeline-node" onclick="loadChapter(6)" data-year="2000s">
+                <div class="dot"></div>
+                <span class="label">Education</span>
+            </div>
+            <div class="timeline-node" onclick="loadChapter(7)" data-year="Visit">
+                <div class="dot"></div>
+                <span class="label">Map</span>
+            </div>
+             <div class="timeline-node" onclick="loadChapter(8)" data-year="Sources">
+                <div class="dot"></div>
+                <span class="label">Refs</span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content-display">
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
